@@ -1,11 +1,159 @@
 @import "mq";
 @import "fonts";
 @import "palette";
+@import "grid";
 // Uncomment for embeds
-//@import "embed";
+/*@import "embed";*/
 // Uncomment for full screen (including immersive article main media)
-//@import "fullscreen";
+/*@import "fullscreen";*/
 .element-atom,
 .interactive-atom {
     margin: 0 !important;
+
+    .interactive-wrapper {
+    	max-width:1260px;
+    }
+
+    .bar.For {
+    	fill:#197caa;
+    }
+
+    .bar.Against {
+        fill:#dc2a7d;
+    }
+
+    .bar.Undecided {
+        fill:#ff9b0b;
+    }
+
+    .axis .domain, .axis .tick line {
+    	display: none;
+    }
+
+    .axis text {
+    	font-family:"Guardian Headline","Guardian Egyptian Web","Guardian Headline Full",Georgia,serif;
+    	font-size: 24px;
+    }
+
+     @media (max-width: 500px) {
+       .axis text {
+        font-size: 16px;
+       }
+
+    }    
+
+    .btn {
+        width:auto;
+        margin-left:5px;        
+        border-radius: 16px;
+        text-align: center;
+        padding: 5px 10px;
+        line-height:1em; 
+        font-family: "Guardian Agate Sans", Arial, sans-serif;
+        overflow:hidden;
+        color:#FFFFFF;
+        background-color: #bdbdbd;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .btn.For.active {
+        background-color: #197caa;
+    }
+
+    .btn.Against.active {
+        background-color: #dc2a7d;
+    }
+
+    .btn.Undecided.active {
+        background-color: #ff9b0b;
+    }
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    .sticky:before,
+    .sticky:after {
+        content: '';
+        display: table;
+    }
+
+    #votingChartWrapper {
+        background: #FFFFFF;
+        border-bottom: 1px solid #dcdcdc;
+        border-top: 1px solid #dcdcdc;
+
+    }
+
+    #ForCol h2 {
+        border-bottom: 2px solid #197caa;
+        margin-bottom:10px;
+    }
+
+    #AgainstCol h2 {
+        border-bottom: 2px solid #dc2a7d;
+        margin-bottom:10px;
+    }
+
+    #UndecidedCol h2 {
+        border-bottom: 2px solid #ff9b0b;
+        margin-bottom:10px;
+    }
+
+    #votingColWrapper {
+
+    padding-top:20px;    
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    }
+
+    .label {
+        font-size:14px;
+        color:#767676;
+        font-family:'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+    }
+
+    .votingBloc {
+        min-height: 60px;
+        margin:5px;
+        border: 1px solid #dcdcdc;
+        background-color: #eaeaea;
+
+    }
+
+    .blocTitle {
+        padding:2px;
+        padding-left:5px; 
+        border-bottom: 1px solid #dcdcdc;
+        font-size: 18px;
+        text-align: center; 
+
+    }
+
+     .voteCount {
+            font-weight: bold;
+            padding-left:10px; 
+        }
+
+    .buttonsWrapper {
+        padding-top:8px;
+        text-align: center; 
+    }
+
+
+    @media (max-width: 750px) {
+        .col33 {
+            width:100%;
+            margin:0;
+        }
+        #votingColWrapper {
+            display: inline;
+        }
+
+    }    
 }
