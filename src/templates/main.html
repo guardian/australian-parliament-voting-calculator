@@ -1,41 +1,53 @@
 <div class="interactive-wrapper">
-    <div class="row main-col">
-        <div id="outcomeText" >
-            Can it pass the <span id="currentHouse">lower house</span>? 
+    <div class="row">
+        <div class="main-col">
+            <p class="chartSans">Use the for, against or undecided buttons to move votes around. For the lower house, the speaker only casts a vote in a tie-break situation.</p>
+
+            <p class="chartSans">Currently showing the: <select id="selectHouse">
+                <option value="lowerhouse">lower house</option>
+                <option value="senate">senate</option>
+                </select>
+            </p>
+            <p class="chartSans">Reset voting status to default: <span class="btn" id="resetChart">reset</span>
         </div>
+    </div>
+    <div class="stickyWrapper row">    
+    	<div class="row sticky" id="votingChartWrapper">
+            <div class="statusText">
+                Outcome: <span id="outcomeText" class="UNKNOWN">UNKNOWN</span>
+            </div>
+    		<div id="votingChart">
+
+    		</div>	
+        </div>
+
+        <div class="row" id="votingColWrapper">
+        	
+        	<div class="col33" id="ForCol">
+                <h2>For: <span id="ForVoteCount"></span></h2>
+                <div id="ForContainer">
+
+                </div>    
+
+        	</div>
+        	
+        	<div class="col33" id="AgainstCol">
+                <h2>Against: <span id="AgainstVoteCount"></span></h2>
+                <div id="AgainstContainer">
+
+                </div> 
+        	
+            </div>
+
+        	<div class="col33" id="UndecidedCol">
+                <h2>Undecided: <span id="UndecidedVoteCount"></span></h2>
+                <div id="UndecidedContainer">
+
+                </div> 
+
+        	</div>
+
+        </div>
+        <div class="row"></div>	
     </div>    
-	<div class="row sticky" id="votingChartWrapper">
-		<div id="votingChart">
-
-		</div>	
-    </div>
-
-    <div class="row" id="votingColWrapper">
-    	
-    	<div class="col33" id="ForCol">
-            <h2>For</h2>
-            <div id="ForContainer">
-
-            </div>    
-
-    	</div>
-    	
-    	<div class="col33" id="AgainstCol">
-            <h2>Against</h2>
-            <div id="AgainstContainer">
-
-            </div> 
-    	
-        </div>
-
-    	<div class="col33" id="UndecidedCol">
-            <h2>Undecided</h2>
-            <div id="UndecidedContainer">
-
-            </div> 
-
-    	</div>
-
-    </div>
-    <div class="row"></div>	
 </div>

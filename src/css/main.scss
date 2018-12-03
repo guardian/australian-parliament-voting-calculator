@@ -81,6 +81,10 @@
         display: table;
     }
 
+/*    .stickyWrapper {
+        position: relative;
+    }*/
+
     #votingChartWrapper {
         background: #FFFFFF;
         border-bottom: 1px solid #dcdcdc;
@@ -103,6 +107,42 @@
         margin-bottom:10px;
     }
 
+    .statusText {
+        margin-left:150px;
+        font-family:'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+        font-weight: bold;
+        color:#767676;
+        font-size:18px;
+    }
+
+    .chartSans {
+        font-family:'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+    }
+
+    #resetChart {
+        display: inline;
+    }
+
+    @media (max-width: 500px) {
+        .statusText {
+            margin-left:100px;
+       }
+
+    }   
+
+    #outcomeText.UNKNOWN {
+        color: #767676;
+    }
+
+    #outcomeText.BLOCKED {
+        color: #800c0c;
+    }
+
+    #outcomeText.PASSED {
+        color: #1c6326;
+    }
+
+
     #votingColWrapper {
 
     padding-top:20px;    
@@ -116,6 +156,12 @@
         font-size:14px;
         color:#767676;
         font-family:'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+    }
+
+    .barLabel {
+        font-family:'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+        font-weight: bold;
+        font-size:18px;
     }
 
     .votingBloc {
